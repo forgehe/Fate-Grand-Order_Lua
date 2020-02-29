@@ -22,8 +22,13 @@ end
 --***************************************************************************
 --AutoRefill Stamina
 Refill_Enabled = 1
+<<<<<<< Updated upstream
 Refill_Resource = "Gold"
 Refill_Repetitions = 25
+=======
+Refill_Resource = "Bronze"
+Refill_Repetitions = 5
+>>>>>>> Stashed changes
 
 --AutoSupportSelection
 Support_SelectionMode = "preferred"
@@ -32,14 +37,20 @@ Support_MaxUpdates = 5
 Support_FallbackTo = "manual"
 Support_FriendsOnly = 0
 Support_FriendNames = ""
+<<<<<<< Updated upstream
 --Support_PreferredServants = "waver4.png, waver3.png, waver2.png, waver1.png"
 Support_PreferredServants = "merlin1.png, merlin2.png, merlin4.png"
 --Support_PreferredServants = "any"
 Support_PreferredCEs = "*scholars_of_chaldea.png, scholars_of_chaldea.png"
+=======
+Support_PreferredServants = "waver4.png, waver3.png, waver2.png, waver1.png"
+--Support_PreferredServants = "merlin1.png, merlin2.png, merlin4.png"
+--Support_PreferredCEs = "gentle_affection.png, scholars_of_chaldea.png"
+>>>>>>> Stashed changes
 --Support_PreferredCEs = "gentle_affection.png"
 --Support_PreferredCEs = "art_of_the_poisonous_snake.png"
 --Support_PreferredCEs = "art_of_death.png"
---Support_PreferredCEs = "any"
+Support_PreferredCEs = "any"
 
 --Bond CE Get
 StopAfterBond10 = 0 
@@ -64,14 +75,14 @@ Skill_Command = "abc,#,def,#,ghi"
 --AutoSkillList
 Enable_Autoskill_List = 1
 
-Autoskill_List[1][1] = "Caster Gold Currency Hearts"
-Autoskill_List[1][2] = "ab4,#,x13a2bcf5,#,degijt2k65"
+Autoskill_List[1][1] = "Black"
+Autoskill_List[1][2] = "hae,#,bcfg1ix33gh4,#,i2djk5"
 
-Autoskill_List[2][1] = "Lancer Bronze"
-Autoskill_List[2][2] = "d,#,b,ac3x11aei5,#,bc3gjkh6"
+Autoskill_List[2][1] = "Grey"
+Autoskill_List[2][2] = "deg,#,abc3x12af5,#,hi3c3jk6"
 
-Autoskill_List[3][1] = "Assasin Silver"
-Autoskill_List[3][2] = "geh,#,abc3x12afd5,5,#,c3bij6,ghik"
+Autoskill_List[3][1] = "White"
+Autoskill_List[3][2] = "ab4,#,dek5,x21def3hij6"
 
 Autoskill_List[4][1] = "Saber Gold"
 Autoskill_List[4][2] = "a1de,#,b1ghjl14,#,fi25"
