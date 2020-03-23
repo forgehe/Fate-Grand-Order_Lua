@@ -222,7 +222,7 @@ local function Support()
 			wait(2.5)
 			StartQuest()
 		elseif IsContinuing == nil then
-			wait(2.5)
+			wait(1)
 			StartQuest()
 			wait(25)	-- Wait timer til battle starts. Uses less battery to wait than to search for images for 25 seconds. Adjust according to device.
 		end
