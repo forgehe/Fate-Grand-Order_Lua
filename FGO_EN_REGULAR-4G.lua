@@ -68,7 +68,7 @@ Autoskill_List[1][1] = "3T Stakes"
 Autoskill_List[1][2] = "ab4,#,x13fg5,#,cbadef2i1j45"
 
 Autoskill_List[2][1] = "Spam Everything"
-Autoskill_List[2][2] = "abcdefghi,0,0,0,0,0,0,0,0,abcdefghi,0,0,0,0,0,0,0,0,abcdefghi"
+Autoskill_List[2][2] = "abc,#,def,#,g2hi"
 
 Autoskill_List[3][1] = "3 Turn Embers"
 Autoskill_List[3][2] =  "abc14,#,x13hief5,#,g1jac4"

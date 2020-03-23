@@ -21,14 +21,9 @@ end
 --Script Configuration, check instructions here: https://github.com/29988122/Fate-Grand-Order_Lua/wiki/Script-configuration-English
 --***************************************************************************
 --AutoRefill Stamina
-Refill_Enabled = 1
-<<<<<<< Updated upstream
-Refill_Resource = "Gold"
-Refill_Repetitions = 25
-=======
-Refill_Resource = "Bronze"
-Refill_Repetitions = 5
->>>>>>> Stashed changes
+Refill_Enabled = 0 
+Refill_Resource = "Silver"
+Refill_Repetitions = 15
 
 --AutoSupportSelection
 Support_SelectionMode = "preferred"
@@ -37,16 +32,9 @@ Support_MaxUpdates = 5
 Support_FallbackTo = "manual"
 Support_FriendsOnly = 0
 Support_FriendNames = ""
-<<<<<<< Updated upstream
---Support_PreferredServants = "waver4.png, waver3.png, waver2.png, waver1.png"
-Support_PreferredServants = "merlin1.png, merlin2.png, merlin4.png"
---Support_PreferredServants = "any"
-Support_PreferredCEs = "*scholars_of_chaldea.png, scholars_of_chaldea.png"
-=======
 Support_PreferredServants = "waver4.png, waver3.png, waver2.png, waver1.png"
 --Support_PreferredServants = "merlin1.png, merlin2.png, merlin4.png"
 --Support_PreferredCEs = "gentle_affection.png, scholars_of_chaldea.png"
->>>>>>> Stashed changes
 --Support_PreferredCEs = "gentle_affection.png"
 --Support_PreferredCEs = "art_of_the_poisonous_snake.png"
 --Support_PreferredCEs = "art_of_death.png"
@@ -75,20 +63,20 @@ Skill_Command = "abc,#,def,#,ghi"
 --AutoSkillList
 Enable_Autoskill_List = 1
 
-Autoskill_List[1][1] = "Black"
-Autoskill_List[1][2] = "hae,#,bcfg1ix33gh4,#,i2djk5"
+Autoskill_List[1][1] = "Star Cluster"
+Autoskill_List[1][2] = "abdg1h,0,c,#,ix33gh4,#,efac2i2j5"
 
-Autoskill_List[2][1] = "Grey"
-Autoskill_List[2][2] = "deg,#,abc3x12af5,#,hi3c3jk6"
+Autoskill_List[2][1] = "Galaxy"
+Autoskill_List[2][2] = "abdg1ht1,#,ck,ix33gh4,#,ac2i2ej5"
 
 Autoskill_List[3][1] = "White"
-Autoskill_List[3][2] = "ab4,#,dek5,x21def3hij6"
+Autoskill_List[3][2] = "ab4,#,de5,#,x13kac3f3j6"
 
-Autoskill_List[4][1] = "Saber Gold"
-Autoskill_List[4][2] = "a1de,#,b1ghjl14,#,fi25"
+Autoskill_List[4][1] = "3T Doors"
+Autoskill_List[4][2] = "abc14,#,def25,#,ghi3j36"
 
-Autoskill_List[5][1] = "All Manuscript"
-Autoskill_List[5][2] = "be,idt1kht2t3,ft2,#,ac2x13ag6,#,bc2j5,de5"
+Autoskill_List[5][1] = "Event Conqueror"
+Autoskill_List[5][2] = "agi6,#,ex33fhijkg15,#,bcdf14"
 
 Autoskill_List[6][1] = "Settings No.6"
 Autoskill_List[6][2] = ""
