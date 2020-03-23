@@ -35,11 +35,13 @@ init = function()
 	local function split(str)
 		local values = {}
 
-		for value in str:gmatch("[^,]+") do
-			value = stringUtils.Trim(value)
+		if str ~= nil then
+			for value in str:gmatch("[^,]+") do
+				value = stringUtils.Trim(value)
 
-			if value:lower() ~= "any" then
-				table.insert(values, value)
+				if value:lower() ~= "any" then
+					table.insert(values, value)
+				end
 			end
 		end
 
@@ -149,6 +151,9 @@ selectPreferred = function(searchMethod)
 			click(game.SUPPORT_UPDATE_CLICK)
 			wait(1)
 			click(game.SUPPORT_UPDATE_YES_CLICK)
+			while game.NeedsToRetry() do
+				game.Retry()
+			end
 			wait(3)
 
 			numberOfUpdates = numberOfUpdates + 1
@@ -285,18 +290,18 @@ end
 
 findSupportBounds = function(support)
 	local supportBound = Region(76,0,2356,428)
-	local regionAnchor = Pattern(SupportImagePath .. "support_region_tool.png")
-	local regionArray = regionFindAllNoFindException( Region(1670,0,90,1440), regionAnchor)
+	local regionAnchor = Pattern(GeneralImagePath .. "support_region_tool.png")
+	local regionArray = regionFindAllNoFindException( Region(2100,0,300,1440), regionAnchor)
 	local defaultRegion = supportBound
-	
+
 	for _, testRegion in ipairs(regionArray) do
-		supportBound:setY(testRegion:getY()-156)
-		if ankuluaUtils.DoesRegionContain(supportBound,support) then
+		supportBound:setY(testRegion:getY() - 114)
+		if ankuluaUtils.DoesRegionContain(supportBound, support) then
 			return supportBound
 		end
 	end
-	
-	toast( "Default Region being returned; file an issue on the github for this issue" )
+
+	--toast( "Default Region being returned; file an issue on the github for this issue" )
 	return defaultRegion
 end
 

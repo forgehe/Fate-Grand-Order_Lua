@@ -23,10 +23,11 @@ local autoskill = require("autoskill")
 -- fields
 local StoneUsed = 0
 local IsContinuing = 0
+local MatchClick = nil
 
 -- functions
 
---Refill stamina based on selected option within FGO_XX_REGULAR.lua
+--Refill stamina based on selected option within FGO_REGULAR.lua
 local function RefillStamina()
 	if Refill_Enabled == 1 and StoneUsed < Refill_Repetitions then
 		if Refill_Resource == "SQ" then
@@ -61,6 +62,20 @@ local function RefillStamina()
 	else
 		scriptExit("AP ran out!")
 	end
+end
+
+local function NeedsToWithdraw()
+	MatchClick = game.WITHDRAW_REGION:exists(GeneralImagePath .. "withdraw.png")	-- MatchClick used to click on the found image
+	return MatchClick
+end
+
+local function Withdraw()
+	click(MatchClick)
+	MatchClick = nil		-- Return MatchClick to default state, to avoid any false positive clicking
+	wait(.5)
+	click(game.WITHDRAW_ACCEPT_CLICK)	-- Click the "Accept" button after choosing to withdraw
+	wait(1)
+	click(game.STAMINA_BRONZE_CLICK)	-- Click the "Close" button after accepting the withdrawal
 end
 
 --Click begin quest in Formation selection, then select boost item, if applicable, then confirm selection.
@@ -126,7 +141,7 @@ local function Result()
 	--Checking if there was a Bond CE reward
 	if game.RESULT_CE_REWARD_REGION:exists(GeneralImagePath .. "ce_reward.png") ~= nil then
 		
-		if StopAfterBond10 ~= nil then --Making sure they can still run it without updating FGO_XX_REGULAR files
+		if StopAfterBond10 ~= nil then --Making sure they can still run it without updating FGO_REGULAR files
 			if StopAfterBond10 == 1 then
 				scriptExit("Bond 10 CE GET!")
 			end
@@ -188,13 +203,14 @@ local function Result()
 
 	--1st time quest reward screen, eg. Mana Prisms, Event CE, Materials, etc.
 	if game.RESULT_QUEST_REWARD_REGION:exists(GeneralImagePath .. "questreward.png") ~= nil then
+		wait(1)
 		click(game.RESULT_NEXT_CLICK)
 	end
 end
 
 --Checks if Support Selection menu is up
 local function IsInSupport()
-        return game.SUPPORT_SCREEN_REGION:exists(Pattern(GeneralImagePath .. "support_screen.png"):similar(.85))
+	return game.SUPPORT_SCREEN_REGION:exists(Pattern(GeneralImagePath .. "support_screen.png"):similar(.85))
 end
 
 --Selections Support option, code located in modules/support.lua
@@ -208,6 +224,7 @@ local function Support()
 		elseif IsContinuing == nil then
 			wait(2.5)
 			StartQuest()
+			wait(25)	-- Wait timer til battle starts. Uses less battery to wait than to search for images for 25 seconds. Adjust according to device.
 		end
 	end
 end
@@ -292,20 +309,28 @@ end
 --[[
 	SCREENS represents list of Validators and Actors
 	When Validator returns true/1, perform the Actor
+	Code for Retry can be found on line 66 of this Script
 	Code for battle.performBattle can be found in modules/battle.lua
-	Code for Menu is on line 89 of this Script
-	Code for Result is on line 109 of this Script
-	Code for Support is on line 174 of this Script
+	Code for Menu is on line 108 of this Script
+	Code for Result is on line 128 of this Script
+	Code for Support is on line 208 of this Script
 ]]--
 local SCREENS = {
+	{ Validator = game.NeedsToRetry,  Actor = game.Retry },
 	{ Validator = battle.isIdle, Actor = battle.performBattle },
 	{ Validator = IsInMenu,      Actor = Menu },
-	{ Validator = IsInResult,    Actor = Result},
-    { Validator = IsInSupport,   Actor = Support}
+	{ Validator = IsInResult,    Actor = Result },
+	{ Validator = IsInSupport,   Actor = Support },
+	{ Validator = NeedsToWithdraw, Actor = Withdraw}
 }
 
 Init()
-
+while(Debug_Mode) do
+	game.MENU_SCREEN_REGION:highlight(5)
+	game.SUPPORT_SCREEN_REGION:highlight(5)
+	game.BATTLE_SCREEN_REGION:highlight(5)
+	game.RESULT_SCREEN_REGION:highlight(5)
+end
 --Loop through SCREENS until a Validator returns true/1
 while(true) do
 	local actor = ankuluaUtils.UseSameSnapIn(function()

@@ -35,7 +35,8 @@ As of 2018.12.30, this script is **working without root** / without being blocke
 * [Advanced features](#advanced-features)
   * [AutoSkill](#autoskill)
     * [Chaldea Combat Uniform: Order Change](#chaldea-combat-uniform-order-change)
-    * [Targeting Enemies](#targeting-enemies) 
+    * [Targeting Enemies](#targeting-enemies)
+    * [Attack with Command Cards before NPs](#attack-with-command-cards-before-nps) 
     * [AutoSkill List](#autoskill-list)
   * [AutoRefill](#autorefill)
   * [AutoSupportSelection](#autosupportselection)
@@ -77,12 +78,15 @@ Adjust them in the settings section inside Ankulua.
 Not really recommended, as you'll *probably* need to refer to [here](http://ankulua.boards.net/board/1/general-discussion) for troubleshooting - we're not able to debug it most of the time, since the scope of the issue is out of our hand. The alternative methods's not really matured yet, unfortunately :( 
 
 ## Usage:
-Please choose the corresponding lua file in AnkuLua according to your:
-* FGO server (supported China / Japan / Taiwan / USA currently)
-    * FGO_CN_REGULAR.lua
-    * FGO_JP_REGULAR.lua
-    * FGO_TW_REGULAR.lua
-    * FGO_EN_REGULAR.lua
+Please set your server region in `FGO_REGULAR.lua`:
+```
+GameRegion = "EN"
+```
+
+- CN for China
+- JP for Japan
+- TW for Taiwan
+- EN for USA
 
 Put your game in either:
 * Menu screen, make the quest you wanna farm as the 1st item on the screen (upper-right corner)
@@ -90,7 +94,7 @@ Put your game in either:
 * Results screen (first menu with or without bond level up)
 * Support Selection screen
 
-And start the script.
+And start the script (`FGO_REGULAR.lua`).
 
 The script will automatically enter battle, choose cards for you, again and again until AP depleted.
 
@@ -201,6 +205,20 @@ Target far left enemy for using Servant 1 skill 1, then target far right enemy f
 ```
 Lastly, the ```Battle_AutoChooseTarget``` variable in the config file is set to on by default. Using the autoskill functionality to target specific enemies is redundant with the auto selection, so it is recommended that you turn auto selection off if you plan to use this Target feature.
 
+#### Attack with Command Cards before NPs
+You can attack using 1 or 2 Command Cards before attacking with NPs.
+
+To use it, insert either ```n1``` or ```n2``` to use 1 or 2 Command Cards before launching the configured NPs.
+
+Here are some examples:
+```
+Skill_Command = "n145"
+Use 1 regular Command Card according to the priority from Battle_CardPriority, then use the NPs of the first and second Servants
+
+Skill_Command = "n26"
+Use 2 regular Command Cards, then use the NP of the third Servant
+```
+
 #### AutoSkill List
 Set ```Enable_Autoskill_List = 1``` to enable this feature.
 You can setup a predefined autoskill list from 1~10, and the script whould let you choose from it when it starts running.
@@ -281,7 +299,7 @@ If you have ```Enable_Autoskill = 1```, the above options applied after all of y
 Known issues are listed here.
 
 ### Syntax error: unexpected symbol near '燎:
-This error shows up when you save FGO_XX_REGULAR.lua using UTF-8-BOM encoding.
+This error shows up when you save FGO_REGULAR.lua using UTF-8-BOM encoding.
 
 Download [Notepad++](https://notepad-plus-plus.org/) or a similar editor and save it using UTF-8 encoding **without BOM** instead.
 
