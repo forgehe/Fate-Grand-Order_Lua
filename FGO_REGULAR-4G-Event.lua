@@ -21,9 +21,9 @@ GameRegion = "EN"
 --Script Configuration, check instructions here: https://github.com/29988122/Fate-Grand-Order_Lua/wiki/Script-configuration-English
 --***************************************************************************
 --AutoRefill Stamina
-Refill_Enabled = 0 
-Refill_Resource = "Silver"
-Refill_Repetitions = 15
+Refill_Enabled = 0
+Refill_Resource = "Gold"
+Refill_Repetitions = 10
 
 --AutoSupportSelection
 Support_SelectionMode = "preferred"
@@ -43,30 +43,28 @@ Support_PreferredCEs = "any"
 
 
 --Bond CE Get
-StopAfterBond10 = 0--[[
-	This option is switched to 1 if you want to stop the script after retreiving a Bond 10 CE card
-	TODO: move this explanation to documentation
---]]
+StopAfterBond10 = 0
+
+	--This option is switched to 1 if you want to stop the script after retreiving a Bond 10 CE card
+	--TODO: move this explanation to documentation
 
 --BoostItem
-BoostItem_SelectionMode = "disabled" --[[
-	possible values: disabled, 1, 2 or 3
-	if you want to use this, make sure "Confirm Use of Boost Item" is off
+BoostItem_SelectionMode = "disabled" 
+	--possible values: disabled, 1, 2 or 3
+	--if you want to use this, make sure "Confirm Use of Boost Item" is off
 	
-	TODO: move this explanation to the documentation
---]]
+	--TODO: move this explanation to the documentation
 
-StorySkip = 0 --[[
-	People really want this feature.
-]]
+StorySkip = 0
+	--People really want this feature.
 
 --AutoSkill
 Enable_Autoskill = 1
 Skill_Confirmation = 0
-Skill_Command = "abc,#,def,#,ghi"
+Skill_Command = "abc4,#,def5,#,ghi6"
 
 --AutoSkillList
-Enable_Autoskill_List = 1
+Enable_Autoskill_List = 0
 
 Autoskill_List[1][1] = "Star Cluster"
 Autoskill_List[1][2] = "abdg1h,0,c,#,ix33gh4,#,efac2i2j5"
@@ -74,8 +72,8 @@ Autoskill_List[1][2] = "abdg1h,0,c,#,ix33gh4,#,efac2i2j5"
 Autoskill_List[2][1] = "Galaxy"
 Autoskill_List[2][2] = "abdg1ht1,#,ck,ix33gh4,#,ac2i2ej5"
 
-Autoskill_List[3][1] = "White"
-Autoskill_List[3][2] = "ab4,#,de5,#,x13kac3f3j6"
+Autoskill_List[3][1] = "Planet"
+Autoskill_List[3][2] = "ech4,#,b4,#,x11ac2dfg2ij5"
 
 Autoskill_List[4][1] = "3T Doors"
 Autoskill_List[4][2] = "abc14,#,def25,#,ghi3j36"
