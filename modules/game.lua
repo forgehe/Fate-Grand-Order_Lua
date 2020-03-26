@@ -101,10 +101,12 @@ game.BATTLE_SKILL_7_CLICK = Location(1400,1160)
 game.BATTLE_SKILL_8_CLICK = Location(1600,1160)
 game.BATTLE_SKILL_9_CLICK = Location(1800,1160)
 game.BATTLE_SKILL_OK_CLICK = Location(1680,850)
+-- location to dismiss error msgs when activating skills
+game.BATTLE_SKILL_ERROR_CLICK = Location(1280,1160)
 
-game.BATTLE_SERVANT_1_CLICK = Location(700,880)
-game.BATTLE_SERVANT_2_CLICK = Location(1280,880)
-game.BATTLE_SERVANT_3_CLICK = Location(1940,880)
+game.BATTLE_SERVANT_1_CLICK = Location(700,680)
+game.BATTLE_SERVANT_2_CLICK = Location(1280,680)
+game.BATTLE_SERVANT_3_CLICK = Location(1940,680)
 
 game.BATTLE_MASTER_SKILL_OPEN_CLICK = Location(2380,640)
 game.BATTLE_MASTER_SKILL_1_CLICK = Location(1820,620)

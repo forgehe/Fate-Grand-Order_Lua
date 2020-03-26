@@ -41,7 +41,9 @@ local function CastSkill(location)
 		if Skill_Confirmation == 1 then
 			click(game.BATTLE_SKILL_OK_CLICK)
 		end
-
+		click(game.BATTLE_SKILL_ERROR_CLICK) 
+		-- for closing error msg when you click on a skill that has a requirement.
+		-- also resets state when clicked on a skill that's on cooldown.
 		WaitForAnimationToFinish()
 	end
 end
