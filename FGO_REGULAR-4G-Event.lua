@@ -1,20 +1,3 @@
---Internal settings - do not modify.
---***************************************************************************
-dir = scriptPath()
-setImagePath(dir)
-
-Debug_Mode = false -- set to 'true' if needing to debug
-
---Initalize for user input listnames
-Autoskill_List = {}
-for i = 1, 10 do
-	Autoskill_List[i] = {}
-	for j = 1, 2 do
-		Autoskill_List[i][j] = 0
-	end
-end
---***************************************************************************
-
 -- Can be EN, JP, CN or TW
 GameRegion = "EN"
 
@@ -22,89 +5,81 @@ GameRegion = "EN"
 --***************************************************************************
 --AutoRefill Stamina
 Refill_Enabled = 0
-Refill_Resource = "Gold"
-Refill_Repetitions = 10
+Refill_Resource = "All Apples"
+Refill_Repetitions = 0
 
 --AutoSupportSelection
 Support_SelectionMode = "preferred"
---Support_SelectionMode = "first"
 Support_SwipesPerUpdate = 5
 Support_MaxUpdates = 3
 Support_FallbackTo = "first"
 Support_FriendsOnly = 0
 Support_FriendNames = ""
-Support_PreferredServants = "waver4.png, waver3.png, waver2.png, waver1.png"
---Support_PreferredServants = "merlin1.png, merlin2.png, merlin4.png"
--- Support_PreferredCEs = "*chaldea_lunchtime.png"
-
--- Support_PreferredServants = "any"
--- Support_PreferredCEs = "*mona_lisa.png"
-Support_PreferredCEs = "any"
-
-
---Bond CE Get
-StopAfterBond10 = 0
-
-	--This option is switched to 1 if you want to stop the script after retreiving a Bond 10 CE card
-	--TODO: move this explanation to documentation
-
---BoostItem
-BoostItem_SelectionMode = "disabled" 
-	--possible values: disabled, 1, 2 or 3
-	--if you want to use this, make sure "Confirm Use of Boost Item" is off
-	
-	--TODO: move this explanation to the documentation
-
-StorySkip = 0
-	--People really want this feature.
+Support_PreferredServants = "any"
+Support_PreferredCEs = "*mona_lisa.png, *chaldea_lunchtime.png"
 
 --AutoSkill
 Enable_Autoskill = 1
 Skill_Confirmation = 0
-Skill_Command = "abc4,#,def5,#,ghi6"
 
---AutoSkillList
-Enable_Autoskill_List = 0
+Autoskill_List =
+{
+	{
+		Name = "3T Stakes",
+		Skill_Command = "ab4,#,x13fgn25,#,cbadef2i1j45"
+	},
+	{
+		Name = "3T Doors",
+		Skill_Command = "abc14,#,def25,#,ghi3j36",
+		Support_PreferredServants = "",
+		Support_PreferredCEs = "*mona_lisa.png, mona_lisa.png"
+	},
+	{
+		Name = "3T Waver",
+		Skill_Command = "ab4,#,def2n25,#,ghi3j36",
+		Support_PreferredServants = "waver4.png, waver3.png, waver2.png, waver1.png",
+		Support_PreferredCEs = ""
+	},
+	{
+		Refill_Enabled = 0,
+		Refill_Resource = "All Apples",
+		Refill_Repetitions = 0,
+		Name = "4",
+		Skill_Command = "",
+		Support_SelectionMode = "",
+		Support_PreferredServants = "",
+		Support_PreferredCEs = "",
+		Battle_CardPriority = "ABQ"
+	},
+	{
+		Name = "5",
+		Skill_Command = "",
+		Support_PreferredServants = "",
+		Support_PreferredCEs = ""
+	},
 
-Autoskill_List[1][1] = "Star Cluster"
-Autoskill_List[1][2] = "abdg1h,0,c,#,ix33gh4,#,efac2i2j5"
-
-Autoskill_List[2][1] = "Galaxy"
-Autoskill_List[2][2] = "abdg1ht1,#,ck,ix33gh4,#,ac2i2ej5"
-
-Autoskill_List[3][1] = "Planet"
-Autoskill_List[3][2] = "ech4,#,b4,#,x11ac2dfg2ij5"
-
-Autoskill_List[4][1] = "3T Doors"
-Autoskill_List[4][2] = "abc14,#,def25,#,ghi3j36"
-
-Autoskill_List[5][1] = "Event Conqueror"
-Autoskill_List[5][2] = "agi6,#,ex33fhijkg15,#,bcdf14"
-
-Autoskill_List[6][1] = "Settings No.6"
-Autoskill_List[6][2] = ""
-
-Autoskill_List[7][1] = "Settings No.7"
-Autoskill_List[7][2] = ""
-
-Autoskill_List[8][1] = "Settings No.8"
-Autoskill_List[8][2] = ""
-
-Autoskill_List[9][1] = "Settings No.9"
-Autoskill_List[9][2] = ""
-
-Autoskill_List[10][1] = "Settings No.10"
-Autoskill_List[10][2] = ""
+}
 
 --Card Priority Customization
--- Battle_CardPriority = "BAQ"
 Battle_CardPriority = "WB, WA, WQ, A, B, Q, RA, RQ, RB"
-
 --AutoChooseTarget
 Battle_AutoChooseTarget = 1
 --NoblePhantasm Casting
 Battle_NoblePhantasm = "danger" 
+
+-- set to 'true' if needing to debug
+Debug_Mode = false
+-- stop the script after retreiving a Bond 10 CE card
+StopAfterBond10 = 0
+-- Boost item, possible values: disabled, 1, 2 or 3. Make sure "Confirm Use of Boost Item" is off
+BoostItem_SelectionMode = "disabled"
+StorySkip = 0
+--Auto Withdrawing
+Withdraw_Enabled = false
 --FastSkipDeadAnimation
 UnstableFastSkipDeadAnimation = 0
 
-dofile(dir .. "regular.lua")
+
+-- Do not modify below this line
+dir = scriptPath()
+dofile(dir .. "middleware.lua")
