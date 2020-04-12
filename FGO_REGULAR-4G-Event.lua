@@ -15,8 +15,9 @@ Support_MaxUpdates = 3
 Support_FallbackTo = "first"
 Support_FriendsOnly = 0
 Support_FriendNames = ""
-Support_PreferredServants = "any"
-Support_PreferredCEs = "*mona_lisa.png, *chaldea_lunchtime.png"
+Support_PreferredServants = "waver4.png, waver3.png, waver2.png, waver1.png"
+--Support_PreferredCEs = "any"
+Support_PreferredCEs = "the_classic_three_great_heroes.png"
 
 --AutoSkill
 Enable_Autoskill = 1
@@ -27,18 +28,27 @@ Autoskill_List =
 	{
 		Name = "3T Stakes",
 		Skill_Command = "ab4,#,x13fgn25,#,cbadef2i1j45"
+		
+	},
+	{
+		Name = "Event Expert",
+		Skill_Command = "abe4,#,x13cgn24,#,ac2dfi2j5",
+		Support_PreferredCEs = "the_classic_three_great_heroes.png"
 	},
 	{
 		Name = "3T Doors",
 		Skill_Command = "abc14,#,def25,#,ghi3j36",
+		--Support_SelectionMode = "first",
 		Support_PreferredServants = "",
-		Support_PreferredCEs = "*mona_lisa.png, mona_lisa.png"
+		--Support_PreferredCEs = "the_classic_three_great_heroes.png"
+		Support_PreferredCEs = "true_samadhi_fire.png"
+		--Support_PreferredCEs = "*mona_lisa.png, mona_lisa.png"
 	},
 	{
 		Name = "3T Waver",
-		Skill_Command = "ab4,#,def2n25,#,ghi3j36",
+		Skill_Command = "ab4,#,x13cgn24,#,a2bchi2j26",
 		Support_PreferredServants = "waver4.png, waver3.png, waver2.png, waver1.png",
-		Support_PreferredCEs = ""
+		Support_PreferredCEs = "the_classic_three_great_heroes.png"
 	},
 	{
 		Refill_Enabled = 0,
@@ -52,12 +62,39 @@ Autoskill_List =
 		Battle_CardPriority = "ABQ"
 	},
 	{
+		Name = "All Three Together",
+		Skill_Command = "",
+		Support_PreferredServants = "",
+		Support_PreferredCEs = "all_three_together.png"
+	},
+	{
+		Name = "Divine Princess",
+		Skill_Command = "",
+		Support_PreferredServants = "",
+		Support_PreferredCEs = "divine_princess_of_the_storm.png"
+	},
+	{
+		Name = "go west",
+		Skill_Command = "",
+		Support_PreferredCEs = "go_west.png"
+	},
+	{
+		Name = "ox_demon_king.png",
+		Skill_Command = "",
+		Support_PreferredCEs = "ox_demon_king.png"
+	},
+	{
+		Name = "true_samadhi_fire.png",
+		Skill_Command = "",
+		Support_PreferredServants = "",
+		Support_PreferredCEs = "true_samadhi_fire.png"
+	},
+	{
 		Name = "5",
 		Skill_Command = "",
 		Support_PreferredServants = "",
 		Support_PreferredCEs = ""
-	},
-
+	}
 }
 
 --Card Priority Customization

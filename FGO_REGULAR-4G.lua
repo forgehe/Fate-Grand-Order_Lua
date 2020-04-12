@@ -57,6 +57,12 @@ Autoskill_List =
 		Support_PreferredServants = "",
 		Support_PreferredCEs = ""
 	},
+	{
+		Name = "5",
+		Skill_Command = "",
+		Support_PreferredServants = "",
+		Support_PreferredCEs = ""
+	}
 
 }
 
