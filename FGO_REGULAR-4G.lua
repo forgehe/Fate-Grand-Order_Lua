@@ -31,20 +31,39 @@ Autoskill_List =
 	{
 		Name = "3T Doors",
 		Skill_Command = "abc14,#,def25,#,ghi3j36",
+		--Support_SelectionMode = "first",
 		Support_PreferredServants = "",
-		Support_PreferredCEs = "*mona_lisa.png, mona_lisa.png"
+		--Support_PreferredCEs = "the_classic_three_great_heroes.png"
+		Support_PreferredCEs = "true_samadhi_fire.png"
+		--Support_PreferredCEs = "*mona_lisa.png, mona_lisa.png"
 	},
 	{
 		Name = "3T Waver",
 		Skill_Command = "ab4,#,def2n25,#,ghi3j36",
 		Support_PreferredServants = "waver4.png, waver3.png, waver2.png, waver1.png",
-		Support_PreferredCEs = ""
+		-- Support_PreferredCEs = ""
+		Support_PreferredCEs = "the_classic_three_great_heroes.png"
 	},
 	{
+		Name = "Event Expert",
+		Skill_Command = "abe4,#,x13cgn24,#,ac2dfi2j5",
+		Support_PreferredCEs = "the_classic_three_great_heroes.png"
+	},
+	{
+		Name = "Event Flaming Mountain",
+		Skill_Command = "abg4,#,x13ac4,#,fi2j5",
+		Support_PreferredCEs = "the_classic_three_great_heroes.png"
+	},
+	{
+		Name = "Event Tianzhu",
+		Skill_Command = "ac4,#,de5,#,x13cgi1j4",
+		Support_PreferredCEs = "go_west.png, true_samadhi_fire.png, all_three_together.png"
+	},
+	{
+		Name = "Template",
 		Refill_Enabled = 0,
 		Refill_Resource = "All Apples",
 		Refill_Repetitions = 0,
-		Name = "4",
 		Skill_Command = "",
 		Support_SelectionMode = "",
 		Support_PreferredServants = "",
@@ -52,13 +71,7 @@ Autoskill_List =
 		Battle_CardPriority = "ABQ"
 	},
 	{
-		Name = "5",
-		Skill_Command = "",
-		Support_PreferredServants = "",
-		Support_PreferredCEs = ""
-	},
-	{
-		Name = "5",
+		Name = "TemplateSmall",
 		Skill_Command = "",
 		Support_PreferredServants = "",
 		Support_PreferredCEs = ""

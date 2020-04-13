@@ -62,34 +62,6 @@ Autoskill_List =
 		Battle_CardPriority = "ABQ"
 	},
 	{
-		Name = "All Three Together",
-		Skill_Command = "",
-		Support_PreferredServants = "",
-		Support_PreferredCEs = "all_three_together.png"
-	},
-	{
-		Name = "Divine Princess",
-		Skill_Command = "",
-		Support_PreferredServants = "",
-		Support_PreferredCEs = "divine_princess_of_the_storm.png"
-	},
-	{
-		Name = "go west",
-		Skill_Command = "",
-		Support_PreferredCEs = "go_west.png"
-	},
-	{
-		Name = "ox_demon_king.png",
-		Skill_Command = "",
-		Support_PreferredCEs = "ox_demon_king.png"
-	},
-	{
-		Name = "true_samadhi_fire.png",
-		Skill_Command = "",
-		Support_PreferredServants = "",
-		Support_PreferredCEs = "true_samadhi_fire.png"
-	},
-	{
 		Name = "5",
 		Skill_Command = "",
 		Support_PreferredServants = "",
