@@ -5,13 +5,13 @@ GameRegion = "EN"
 --***************************************************************************
 --AutoRefill Stamina
 Refill_Enabled = 0
-Refill_Resource = "All Apples"
-Refill_Repetitions = 0
+Refill_Resource = "Gold"
+Refill_Repetitions = 10
 
 --AutoSupportSelection
 Support_SelectionMode = "preferred"
-Support_SwipesPerUpdate = 5
-Support_MaxUpdates = 3
+Support_SwipesPerUpdate = 3
+Support_MaxUpdates = 4
 Support_FallbackTo = "first"
 Support_FriendsOnly = 0
 Support_FriendNames = ""
@@ -29,13 +29,17 @@ Autoskill_List =
 		Skill_Command = "ab4,#,x13fgn25,#,cbadef2i1j45"
 	},
 	{
+		Name = "3T Bullets",
+		Skill_Command = "b4,#,de5,#,f3ik36"
+	},
+	{
 		Name = "3T Doors",
 		Skill_Command = "abc14,#,def25,#,ghi3j36",
 		--Support_SelectionMode = "first",
 		Support_PreferredServants = "",
 		--Support_PreferredCEs = "the_classic_three_great_heroes.png"
-		Support_PreferredCEs = "true_samadhi_fire.png"
-		--Support_PreferredCEs = "*mona_lisa.png, mona_lisa.png"
+		--Support_PreferredCEs = "true_samadhi_fire.png"
+		Support_PreferredCEs = "*mona_lisa.png, mona_lisa.png"
 	},
 	{
 		Name = "3T Waver",
@@ -45,19 +49,50 @@ Autoskill_List =
 		Support_PreferredCEs = "the_classic_three_great_heroes.png"
 	},
 	{
-		Name = "Event Expert",
-		Skill_Command = "abe4,#,x13cgn24,#,ac2dfi2j5",
-		Support_PreferredCEs = "the_classic_three_great_heroes.png"
+		Name = "Sakamoto Detective",
+		Refill_Enabled = 0,
+		Refill_Repetitions = 1,
+		Skill_Command = "abh4,#,x13bcf5,#,a2efgi56",
+		Support_PreferredServants = "waver4.png, waver3.png, waver2.png, waver1.png",
+		Support_PreferredCEs = ""
 	},
 	{
-		Name = "Event Flaming Mountain",
-		Skill_Command = "abg4,#,x13ac4,#,fi2j5",
-		Support_PreferredCEs = "the_classic_three_great_heroes.png"
+		Name = "Casters/Shiba",
+		Refill_Enabled = 0,
+		Refill_Repetitions = 1,
+		Skill_Command = "abf4,#,x13d5,eba35,#,cghjk6",
+		Support_PreferredServants = "waver4.png, waver3.png, waver2.png, waver1.png",
+		Support_PreferredCEs = ""
 	},
 	{
-		Name = "Event Tianzhu",
-		Skill_Command = "ac4,#,de5,#,x13cgi1j4",
-		Support_PreferredCEs = "go_west.png, true_samadhi_fire.png, all_three_together.png"
+		Name = "Meguro Fudo",
+		Refill_Enabled = 0,
+		Refill_Repetitions = 1,
+		Skill_Command = "ab4,#,fk25,#,df3ghi36",
+		--Support_PreferredServants = "waver4.png, waver3.png, waver2.png, waver1.png",
+		Support_PreferredServants = "merlin4.png, merlin2.png, merlin1.png",
+		--Support_PreferredCEs = "an_afternoon_at_the_fortress.png"
+		Support_PreferredCEs = ""
+	},
+	{
+		Name = "Meao/Shinjuku",
+		Refill_Enabled = 0,
+		Refill_Repetitions = 2,
+		Skill_Command = "abdei4,#,x13af5,#,c3gji6",
+		--Support_PreferredServants = "waver4.png, waver3.png, waver2.png, waver1.png",
+		Support_PreferredServants = "merlin4.png, merlin2.png, merlin1.png",
+		--Support_PreferredCEs = "an_afternoon_at_the_fortress.png"
+		Support_PreferredCEs = ""
+	},
+	{
+		Name = "Etola/Tsukiji",
+		Refill_Enabled = 0,
+		Refill_Repetitions = 2,
+		Skill_Command = "ab4,#,x13df5,#,a3bcghj6",
+		Support_PreferredServants = "waver4.png, waver3.png, waver2.png, waver1.png",
+		--Support_PreferredServants = "merlin4.png, merlin2.png, merlin1.png",
+		--Support_PreferredCEs = "an_afternoon_at_the_fortress.png"
+		Support_PreferredCEs = ""
 	},
 	{
 		Name = "Template",
