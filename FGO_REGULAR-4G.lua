@@ -6,7 +6,7 @@ GameRegion = "EN"
 --AutoRefill Stamina
 Refill_Enabled = 0
 Refill_Resource = "Gold"
-Refill_Repetitions = 10
+Refill_Repetitions = 0
 
 --AutoSupportSelection
 Support_SelectionMode = "preferred"
@@ -14,7 +14,7 @@ Support_SwipesPerUpdate = 3
 Support_MaxUpdates = 4
 Support_FallbackTo = "first"
 Support_FriendsOnly = 0
-Support_FriendNames = ""
+Support_FriendNames = "Synovia.png, Ink.png, Aurellius.png, Cryo.png"
 Support_PreferredServants = "any"
 Support_PreferredCEs = "*mona_lisa.png, *chaldea_lunchtime.png"
 
@@ -25,28 +25,30 @@ Skill_Confirmation = 0
 Autoskill_List =
 {
 	{
-		Name = "3T Stakes",
-		Skill_Command = "ab4,#,x13fgn25,#,cbadef2i1j45"
+		Name = "3T Doors",
+		Party_Number = 1,
+		Skill_Command = "abc14,#,def25,#,ghi3j3k36",
+		--Support_SelectionMode = "first",
+		Support_PreferredServants = "skadi4.png, skadi_3.png, skadi2.png, skadi1.png"
+		--Support_PreferredCEs = "*mona_lisa.png, mona_lisa.png"
+	},
+	{
+		Name = "3T Rings",
+		Party_Number = 2,
+		Skill_Command = "ab4,#,ef5,#,k3ic36"
 	},
 	{
 		Name = "3T Bullets",
+		Party_Number = 3,
 		Skill_Command = "b4,#,de5,#,f3ik36"
 	},
 	{
-		Name = "3T Doors",
-		Skill_Command = "abc14,#,def25,#,ghi3j36",
-		--Support_SelectionMode = "first",
-		Support_PreferredServants = "",
-		--Support_PreferredCEs = "the_classic_three_great_heroes.png"
-		--Support_PreferredCEs = "true_samadhi_fire.png"
-		Support_PreferredCEs = "*mona_lisa.png, mona_lisa.png"
-	},
-	{
-		Name = "3T Waver",
-		Skill_Command = "ab4,#,def2n25,#,ghi3j36",
-		Support_PreferredServants = "waver4.png, waver3.png, waver2.png, waver1.png",
+		Name = "3T Aurora",
+		Party_Number = 4,
+		Skill_Command = "bc4,#,x13g2f5,#,acefhij54",
+		Support_PreferredServants = "waver4.png, waver3.png, waver2.png, waver1.png"
 		-- Support_PreferredCEs = ""
-		Support_PreferredCEs = "the_classic_three_great_heroes.png"
+		--Support_PreferredCEs = "the_classic_three_great_heroes.png"
 	},
 	{
 		Name = "Sakamoto Detective",
@@ -57,22 +59,22 @@ Autoskill_List =
 		Support_PreferredCEs = ""
 	},
 	{
-		Name = "Casters/Shiba",
+		Name = "Casters/Megi/Shiba",
 		Refill_Enabled = 0,
 		Refill_Repetitions = 1,
-		Skill_Command = "abf4,#,x13d5,eba35,#,cghjk6",
+		Skill_Command = "bcf4,#,x13d5,eba35,#,cghjt2k6",
 		Support_PreferredServants = "waver4.png, waver3.png, waver2.png, waver1.png",
-		Support_PreferredCEs = ""
+		Support_PreferredCEs = "imperial_capital_holy_grail_war.png, fang-sharpening_hidden_sword.png, sakamoto_detective_agency.png"
 	},
 	{
 		Name = "Meguro Fudo",
 		Refill_Enabled = 0,
 		Refill_Repetitions = 1,
-		Skill_Command = "ab4,#,fk25,#,df3ghi36",
+		Skill_Command = "ab4,#,fl25,#,df3ghi3j36",
 		--Support_PreferredServants = "waver4.png, waver3.png, waver2.png, waver1.png",
-		Support_PreferredServants = "merlin4.png, merlin2.png, merlin1.png",
-		--Support_PreferredCEs = "an_afternoon_at_the_fortress.png"
-		Support_PreferredCEs = ""
+		--Support_PreferredServants = "merlin4.png, merlin2.png, merlin1.png",
+		--Support_PreferredCEs = ""
+		Support_PreferredCEs = "imperial_capital_holy_grail_war.png, fang-sharpening_hidden_sword.png"
 	},
 	{
 		Name = "Meao/Shinjuku",
